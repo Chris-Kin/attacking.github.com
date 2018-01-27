@@ -8,16 +8,20 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css" media="screen">
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/vue"></script>
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">Attacking.GitHub.com</h1>
-      <h2 class="project-tagline">misuhom@163.com</h2>
-    </section>
-
-    <section class="main-content">
-
-    </section>
-
+    <div id="app">
+      <section class="site-group" v-for='nav in navs'>
+        <p class="group-title">{{nav.name}}</p>
+        <ul class="group-ul">
+          <li class="group-li" v-for='site in nav.list'>
+            <a class="" :href="site.link" target="_blank">{{site.label}}</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <script type="text/javascript" src="./scripts/index.js"></script>
   </body>
 </html>

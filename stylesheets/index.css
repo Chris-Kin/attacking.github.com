@@ -1,0 +1,19 @@
+.site-group {
+	margin: 20px 0;
+}
+.group-title {
+	text-align: center;
+}
+.group-ul {
+	list-style-type: none;
+}
+.group-li {
+	display: inline-block;
+}
+.group-li a {
+	display: inline-block;
+	width: 200px;
+	height: 124px;
+	box-shadow: 0 2px 2px #ccc;
+	margin: 10px;
+}
